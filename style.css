@@ -1,4 +1,31 @@
 body{
-    background-color: rgb(193, 211, 226);
+    background-color: beige
+    
 }
 
+.container-xxl{
+    background: url(/images/graduation.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    padding-bottom: 20%;
+    border-color: black;
+}
+
+h1{
+    color: white;
+    padding-top: 20%;
+    font-weight:700;
+}
+h5{
+    color: white;
+}
+
+
+
+.container-sm{
+    background-color: white;
+    padding-inline: auto;
+
+}
+    
+    
