@@ -1,5 +1,6 @@
 //US colleges
 let resultDataUs;
+
 const $divUs=$('#us-search-div');
 const $inputUs=$('#us-input');
 const $btnClrUs=$('#us-clear');
@@ -36,36 +37,32 @@ function createCard(){
     let info = resultDataUs.results;
     
     const $uniCard=$('<div></div>');
-    $uniCard.addClass('card');
+    $uniCard.addClass('usList');
     $uniCard.appendTo($divUs);
     
     for ( let indexUs = 0; indexUs < info.length; indexUs++){
         
-        const $ul=$('<ul></ul>');
-        $ul.addClass('list');
-        $ul.appendTo($uniCard);
+        const $div=$('<div class="card"></div>');
+        $div.addClass('list');
+        $div.appendTo($uniCard);
         
         let acceptance= info[indexUs].latest.admissions.admission_rate.overall * 100 ;
         
-        $ul.html(
-            `<li class="list-group-item">${info[indexUs].latest.school.name}</li>
-            <li class="list-group-item">City: ${info[indexUs].latest.school.city}, ${info[indexUs].latest.school.state} ${info[indexUs].school.zip}</li>
-            <li class="list-group-item">Acceptance rate: ${acceptance}%</li>
-            <li class="list-group-item">In-state Tuition: $${info[indexUs].latest.cost.tuition.in_state}</li>
-            <li class="list-group-item">Out-of-State Tuition: $${info[indexUs].latest.cost.tuition.out_of_state}</li>
-            <li class="list-group-item">Accreditation: ${info[indexUs].latest.school.accreditor}</li>
-            <li class="list-group-item">Webite: <a href= ${info[indexUs].latest.school.school_url}>${info[indexUs].latest.school.school_url}</a> </li>
-            <li class="list-group-item">Price Calculator: <a href= ${info[indexUs].latest.school.price_calculator_url}>${info[indexUs].latest.school.price_calculator_url}</a></li>`
+        $div.html(
+            `<div><h5><u>${info[indexUs].latest.school.name}</u></h5></div>
+            <div></div>City: ${info[indexUs].latest.school.city}, ${info[indexUs].latest.school.state} ${info[indexUs].school.zip}</div>
+            <div>Acceptance rate: ${acceptance}%</div>
+            <div>In-state Tuition: $${info[indexUs].latest.cost.tuition.in_state}</div>
+            <div>Out-of-State Tuition: $${info[indexUs].latest.cost.tuition.out_of_state}</div>
+            <div>Accreditation: ${info[indexUs].latest.school.accreditor}</div>
+            <div>Webite: <a href= ${info[indexUs].latest.school.school_url}>${info[indexUs].latest.school.school_url}</a> </div>
+            <div>Price Calculator: <a href= ${info[indexUs].latest.school.price_calculator_url}>${info[indexUs].latest.school.price_calculator_url}</a></div>`
         );
     }
     
 
 
 }
-
-
-   
-
 
 //Outside US
 const $divWorld= $('#world-div');
