@@ -1,7 +1,7 @@
 body{
     background: url(/images/graduation.jpg) ;
     background-size: 100%;
-    background-repeat: no-repeat; 
+    background-repeat:round;
 }
 
 h1{
@@ -20,7 +20,7 @@ h5{
     background-color: black;
     font-weight:bolder;
     padding-top: 2%;
-    padding-bottom: 2%;
+    padding-bottom: 5%;
 }
 #world-inner{
     position: absolute;
